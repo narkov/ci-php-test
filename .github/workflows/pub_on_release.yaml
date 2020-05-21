@@ -38,7 +38,8 @@ jobs:
 #        run: docker build -t $LOGIN/$NAME:${GITHUB_REF:11} -f Dockerfile .
         run: docker build -t narkov/ci-php-test:${GITHUB_REF##*/} -f Dockerfile .
       - name: Push image to docker.io
-        run: docker push $LOGIN/$NAME:${GITHUB_REF:11}
+#        run: docker push $LOGIN/$NAME:${GITHUB_REF:11}
+        run: docker push narkov/ci-php-test:${GITHUB_REF##*/}
 
   deploy:
     needs: [build_and_pub]
