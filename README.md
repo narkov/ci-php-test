@@ -30,3 +30,7 @@ jobs:
      - name: Run tests
        run: php bin/phpunit
 ```
+
+Hopefully it will be useful for someone who cares.
+
+Cheers
