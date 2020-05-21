@@ -36,7 +36,7 @@ jobs:
       - uses: actions/checkout@master
       - name: Build image
 #        run: docker build -t $LOGIN/$NAME:${GITHUB_REF:11} -f Dockerfile .
-        run: docker build -t narkov/ci-php-test:${GITHUB_REF##*/} .
+        run: docker build -t narkov/ci-php-test:${GITHUB_REF##*/} -f Dockerfile .
       - name: Push image to docker.io
         run: docker push $LOGIN/$NAME:${GITHUB_REF:11}
 
