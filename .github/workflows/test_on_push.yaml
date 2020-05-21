@@ -13,6 +13,8 @@ jobs:
        with:
          php-version: '7.4'
          architecture: 'x64'
+     - name: Checkout
+       uses: actions/checkout@v1
      - name: Install requirements
        run: composer install
      - name: Run tests
