@@ -4,3 +4,18 @@ on:
      - '!refs/tags/*'
    branches:
      - '*'
+jobs:
+ run_tests:
+   runs-on: [ubuntu-latest]
+steps:
+ - name: Setup PHP Action
+   uses: shivammathur/setup-php@2.2.1
+   with:
+     php-version: '7.4'
+     architecture: 'x64'
+ - name: Install requirements
+   run: composer install
+ - name: Run tests
+   run: php bin/phpunit
+# - name: Tests report
+#   run: coverage report
