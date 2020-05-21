@@ -1,5 +1,10 @@
 # ci-php-test
 Github actions CI Symfony/PHP proof concept
+
+The goal of the project is to setup working Symfony 5.* project CI using Github actions.
+The actual project contains only single TestController which returns success and functional test which is testing this API call.
+
+Everytime the new code commit is pushed to git - github pulls latest code, run composer and perform test validation.
  
 ```
 on:
