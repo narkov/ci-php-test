@@ -1,6 +1,13 @@
 on:
- release:
-   types: [published]
+ push:
+   tags:
+     - '!refs/tags/*'
+   branches:
+     - '*'
+   paths-ignore:
+     - 'README.md'
+# release:
+#   types: [published]
 
 jobs:
   run_tests:
