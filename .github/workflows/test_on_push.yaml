@@ -16,8 +16,8 @@ jobs:
          php-version: '7.4'
      - name: Checkout
        uses: actions/checkout@v1
-     - name: Install requirements
-       run: composer install
+#     - name: Install requirements
+#       run: composer install
      - name: Run tests
        run: php bin/phpunit
 # - name: Tests report
