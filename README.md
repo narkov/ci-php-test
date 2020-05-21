@@ -1,7 +1,7 @@
 # ci-php-test
 Github actions CI Symfony/PHP proof concept
  
-<addr>
+```
 on:
  push:
    tags:
@@ -24,4 +24,4 @@ jobs:
        run: composer install
      - name: Run tests
        run: php bin/phpunit
-</addr>
+```
