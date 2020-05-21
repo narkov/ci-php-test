@@ -1,2 +1,25 @@
 # ci-php-test
 Github actions CI Symfony/PHP proof concept
+ 
+on:
+ push:
+   tags:
+     - '!refs/tags/*'
+   branches:
+     - '*'
+   paths-ignore:
+     - 'README.md'
+jobs:
+ run_tests:
+   runs-on: [ubuntu-latest]
+   steps:
+     - name: Setup PHP Action
+       uses: shivammathur/setup-php@2.2.1
+       with:
+         php-version: '7.4'
+     - name: Checkout
+       uses: actions/checkout@v1
+     - name: Install requirements
+       run: composer install
+     - name: Run tests
+       run: php bin/phpunit
