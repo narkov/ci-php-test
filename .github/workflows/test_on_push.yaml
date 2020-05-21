@@ -12,7 +12,6 @@ jobs:
        uses: shivammathur/setup-php@2.2.1
        with:
          php-version: '7.4'
-         architecture: 'x64'
      - name: Checkout
        uses: actions/checkout@v1
      - name: Install requirements
