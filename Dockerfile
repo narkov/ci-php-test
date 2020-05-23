@@ -8,4 +8,4 @@ RUN curl -sS https://getcomposer.org/installer | php -- \
         composer
 RUN "composer install"
 EXPOSE 8000
-#CMD "symfony serve -d --host 0.0.0.0 --port 80"
+CMD "symfony serve -d --host 0.0.0.0 --port 80"
